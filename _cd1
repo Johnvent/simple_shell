@@ -1,0 +1,25 @@
+cd: cd [-L|[-P [-e]] [-@]] [dir]
+    Changes the shell working directory.
+
+    Changes the current directory to DIR.  
+
+    Alternative directory names in CDPATH are separated by a colon (:).
+    Null directory name is the same as the current directory.  If DIR begins
+    with (/), CDPATH is not used.
+
+
+    The options:
+      -L        force symbolic links to be followed: resolve symbolic
+                links in DIR after processing instances of `..'
+      -P        use the physical directory structure without following
+                symbolic links: resolve symbolic links in DIR before
+                processing instances of `..'
+      -e        if the -P option is supplied, and the current working
+                directory cannot be determined successfully, exit with
+                a non-zero status
+      -@        on systems that support it, present a file with extended
+                attributes as a directory containing the file attributes
+
+    Exit Status:
+    Return 0 if the directory is changed, and if $PWD is set successfully when
+    -P is used; else, non-zero.
