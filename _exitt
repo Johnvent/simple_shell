@@ -1,4 +1,0 @@
-exit: exit [x]
-    Exits shell.
-
-    Exits the shell with a status of x.
